@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box 0;
+      }
+      body {
+        font-family: "Crimson Pro", "serif";
+        color: rgb(126, 126, 126);
+        line-height: 1;
+      }
+      header {
+        background-color: aqua;
+        height: 100vh;
+        background-image: url(medicine.jpg);
+        background-size: cover;
+        margin-bottom: 96px;
+      }
+      .header-container {
+        width: 1365px;
+        margin: 0 auto;
+
+        display: flex;
+        justify-content: space-between;
+      }
+      .empty {
+        width: 40%;
+        height: 50%;
+        display: inline-block;
+      }
+      .header-container-inner {
+        display: inline-block;
+      }
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: stretch;
+        gap: 28px;
+        padding-top: 12px;
+        padding-right: 16px;
+        margin-bottom: 96px;
+        /* justify-content: space-between; */
+      }
+      .nav-links {
+        text-decoration: none;
+        font-size: 12px;
+        /* width: 100px; */
+        text-transform: uppercase;
+        padding: 0 5px;
+        font-weight: 500;
+        font-family: Roboto, sans-serif;
+        letter-spacing: 0.06em;
+        cursor: pointer;
+        color: #0c4170;
+      }
+      .item-4:link,
+      .item-4:visited {
+        padding: 10px 10px;
+        border: 1px solid #0c4170;
+        border-radius: 5px;
+        transition: all 0.2s;
+      }
+      .item-4:hover,
+      .item-4:active {
+        background-color: #0c4170;
+        color: #fff;
+      }
+
+      .item-5:link,
+      .item-5:visited {
+        padding: 10px 22px;
+        border: 1px solid #0c4170;
+        background-color: #fc6b42;
+        color: #fff;
+        border-radius: 5px;
+        transition: all 0.2s;
+        /* align-self: center; */
+      }
+      .item-5:hover,
+      .item-5:active {
+        background-color: #fff;
+        border: 1px solid #fc6b42;
+        color: #fc6b42;
+      }
+
+      h1 {
+        font-size: 52px;
+        color: #0c4170;
+        line-height: 1;
+        font-weight: 400;
+        width: 534px;
+        padding-left: 20px;
+      }
+      p {
+        padding-left: 12px;
+        width: 570px;
+        color: #0c4170;
+        font-size: 16px;
+        font-weight: 500;
+        font-family: "Roboto";
+        margin-bottom: 48px;
+        /* display: inline; */
+      }
+      span {
+        /* color: #fc6b42; */
+      }
+      .icon {
+        height: 24px;
+        width: 24px;
+      }
+
+      .header-box {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        margin-left: 56px;
+      }
+      .btn {
+        align-self: flex-start;
+        text-align: center;
+        margin-left: 12px;
+        padding: 15px 30px;
+        border-radius: 8px;
+        /* margin-left: 12px; */
+        text-decoration: none;
+        font-size: 18px;
+        color: #fff;
+        background-color: #0c4170;
+      }
+    </style>
+    <title>Medicine</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="empty"></div>
+        <div class="header-container-inner">
+          <nav>
+            <a href="#" class="nav-links">Services</a>
+            <a href="#" class="nav-links">Membership</a>
+            <a href="#" class="nav-links">Locations</a>
+            <a href="#" class="nav-links item-4">Medical Team</a>
+            <a href="#" class="nav-links item-5">Book Now</a>
+            <a href="#" class="nav-links">Login</a>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </nav>
+          <div class="header-box">
+            <h1><span>Your</span> wellness evolution starts at home.</h1>
+            <p>
+              AT-HOME IV THERAPY & INTEGRATIVE MEDICINE, DESIGNED JUST FOR YOU
+            </p>
+            <a href="#" class="btn item-5" style="width: 514px">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>
