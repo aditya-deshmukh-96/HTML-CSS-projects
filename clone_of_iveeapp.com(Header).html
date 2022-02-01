@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200;400;500&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="ivee.js"></script>
+
+    <style>
+      /*---01 TYPOGRAPHY SYSTEM
+      -Font Size System (px)
+            10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+      -Line Height:
+      -Default:1
+
+      -Font Weight:
+      -Default:400
+
+
+      ---02 COLORS
+      Primary: #e67e22
+      -Tints: #fdf2e9
+      -Shades:
+      -Accents:
+      -Greys:
+      #555
+      #333
+
+      ---05 SHADOWS
+
+      --06 BORDER RADIUS
+
+      ---07 WHITESPACE
+      SPACING SYSTEM (px):
+            2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+      */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Crimson Pro", "serif";
+        color: rgb(126, 126, 126);
+        line-height: 1;
+        overflow-x: hidden;
+      }
+      header {
+        background-color: aqua;
+        height: 100vh;
+        background-image: url(medicine.jpg);
+        background-size: cover;
+        /* margin-bottom: 0px; */
+      }
+      .header-container {
+        width: 100%px;
+        height: 100vh;
+        margin: 0 auto;
+
+        display: flex;
+        justify-content: space-between;
+      }
+      .empty {
+        width: 40%;
+        height: 50%;
+        display: inline-block;
+      }
+      .header-container-inner {
+        display: inline-block;
+      }
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: stretch;
+        gap: 28px;
+        padding-top: 12px;
+        padding-right: 16px;
+        margin-bottom: 96px;
+        /* justify-content: space-between; */
+      }
+      .nav-links {
+        text-decoration: none;
+        font-size: 12px;
+        /* width: 100px; */
+        text-transform: uppercase;
+        padding: 0 5px;
+        font-weight: 500;
+        font-family: Roboto, sans-serif;
+        letter-spacing: 0.06em;
+        cursor: pointer;
+        color: #0c4170;
+      }
+      .item-4:link,
+      .item-4:visited {
+        padding: 10px 10px;
+        border: 1px solid #0c4170;
+        border-radius: 5px;
+        transition: all 0.2s;
+      }
+      .item-4:hover,
+      .item-4:active {
+        background-color: #0c4170;
+        color: #fff;
+      }
+
+      .item-5:link,
+      .item-5:visited {
+        padding: 10px 22px;
+        border: 1px solid #0c4170;
+        background-color: #fc6b42;
+        color: #fff;
+        border-radius: 5px;
+        transition: all 0.2s;
+        /* align-self: center; */
+      }
+      .item-5:hover,
+      .item-5:active {
+        background-color: #fff;
+        border: 1px solid #fc6b42;
+        color: #fc6b42;
+      }
+
+      h1 {
+        font-size: 52px;
+        color: #0c4170;
+        line-height: 1;
+        font-weight: 400;
+        width: 534px;
+        padding-left: 20px;
+      }
+      p {
+        padding-left: 12px;
+        width: 570px;
+        color: #0c4170;
+        font-size: 16px;
+        font-weight: 500;
+        font-family: "Roboto";
+        margin-bottom: 48px;
+        /* display: inline; */
+      }
+      span {
+        /* color: #fc6b42; */
+      }
+      .icon {
+        height: 24px;
+        width: 24px;
+      }
+
+      .header-box {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        margin-left: 56px;
+      }
+      .btn {
+        align-self: flex-start;
+        text-align: center;
+        margin-left: 12px;
+        padding: 15px 30px;
+        border-radius: 8px;
+        /* margin-left: 12px; */
+        text-decoration: none;
+        font-size: 18px;
+        color: #fff;
+        background-color: #0c4170;
+      }
+
+      /* **************
+            MODULE Section
+
+            */
+
+      .section-module {
+        padding: 8rem 0;
+        background-color: #f5fbff;
+      }
+      .module-box {
+        display: flex;
+        justify-content: center;
+      }
+      .module-content {
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 38px;
+        width: 49%;
+        /* justify-content: center; */
+      }
+      .module-sub-heading {
+        margin: 0;
+        padding: 0;
+        text-transform: uppercase;
+        font-size: 16px;
+        letter-spacing: 0.3px;
+
+        /* display: inline; */
+      }
+      .secondary-heading {
+        color: #0c4170;
+        font-size: 40px;
+        font-weight: 400;
+      }
+      .module-desciption {
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+        font-weight: 200;
+        line-height: 1.4;
+        letter-spacing: 0.3px;
+        color: #285074d2;
+      }
+
+      .section-how {
+        background-color: #f5fbff;
+        padding: 0 1.2rem;
+      }
+      .how-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* justify-content: center; */
+        column-gap: 8rem;
+        padding: 6.4rem 5.8rem;
+        border-radius: 2.4rem;
+        background-color: #fff;
+
+        /* align-items: center; */
+      }
+      .how-text-box {
+        margin: 0;
+        padding: 0;
+      }
+      .how-subheading {
+        margin: 0;
+        margin-bottom: 1.2rem;
+        padding: 0;
+      }
+      .margin {
+        margin-bottom: 3.2rem;
+      }
+
+      .all-step-btn {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        /* flex-shrink: 0;
+        flex-grow: 0; */
+      }
+      .step-icon {
+      }
+      .step-btn {
+        text-align: left;
+        background-color: #fff;
+        border: none;
+        cursor: pointer;
+        /* flex-basis: 5rem; */
+        /* display: inline-block; */
+      }
+      .step-btn-text {
+        font-weight: 600;
+        /* font: 500; */
+        letter-spacing: 0.5px;
+        color: #0c4170;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+      }
+      .step-box {
+        display: none;
+      }
+      .open {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        display: block;
+      }
+      .step-box-heading {
+        margin: 0;
+        margin-bottom: 1.2rem;
+        padding: 0;
+        font-size: 1.4rem;
+        margin-left: 1.2rem;
+      }
+      .step-box-list {
+        list-style: none;
+        color: #0c4170;
+        display: flex;
+        flex-direction: column;
+        /* gap: 0.8rem; */
+      }
+      .border-bottom {
+        border-bottom: 1px solid rgba(27, 79, 124, 0.288);
+        /* margin-left: 1.2rem; */
+      }
+      .step-box-list-item {
+        border-top: 1px solid rgba(27, 79, 124, 0.288);
+        line-height: 0.8rem;
+        text-transform: uppercase;
+        padding: 1.2rem 0;
+        margin-left: 1.2rem;
+      }
+
+      .how-video-box {
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        border-radius: 3.2rem;
+        width: 25.8rem;
+        border: 8px solid #0c4170;
+      }
+      .how-video-box video {
+        width: 100%;
+        border: none;
+        border-radius: 1.2rem;
+        transform: translateY(3.8rem);
+      }
+
+      .how-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+      }
+      .how-list-item {
+        color: #0c4170;
+        font-size: 1.2rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+      .how-list-item::before {
+        content: "\2022";
+        color: rgb(255, 193, 158);
+        /* border: 1px solid #0c4170; */
+        border-radius: 50%;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+      }
+
+      .how-btn {
+        background-color: #fc6b42;
+        border: 1px solid #0c4170;
+        border-radius: 9px;
+        padding: 0.9rem 1.6rem;
+        transition: all 0.3s;
+        margin-top: 3.2rem;
+      }
+      .how-btn-link:link,
+      .how-btn-link:visited {
+        text-decoration: none;
+        color: #fff;
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+      }
+      .how-btn:hover .how-btn-link {
+        color: #fc6b42;
+      }
+      .how-btn:hover {
+        background-color: #fff;
+        color: #fc6b42;
+        cursor: pointer;
+        border: 1px solid #fc6b42;
+      }
+
+      .section-pricing {
+        background-color: #f5fbff;
+        /* background-color: #265691; */
+        padding: 3.2rem;
+        /* padding-bottom: 0; */
+      }
+
+      .img-card1 {
+        align-self: center;
+        width: 30%;
+      }
+      .img-card2 {
+        align-self: center;
+        width: 48%;
+        /* height: 25.5rem; */
+      }
+      .pricing-textbox-outer {
+        display: flex;
+        justify-content: center;
+      }
+      .pricing-text-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 38rem;
+      }
+      .pricing-subheading {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+      }
+      .secondary-heading {
+        /* display: flex; */
+        text-align: center;
+      }
+      .margin-bottom {
+        margin-bottom: 2.4rem;
+      }
+
+      .pricing-cards-box {
+        display: flex;
+        justify-content: center;
+      }
+      .pricing-cards {
+        display: flex;
+        gap: 1.2rem;
+      }
+      .pricing-card1 {
+        background-color: #cce0f8;
+        border-radius: 40px;
+        display: flex;
+        flex-direction: column;
+        /* transform: translateY(8rem); */
+        gap: 1.2rem;
+        max-width: 32rem;
+        padding: 2.4rem;
+      }
+
+      .card-subheading {
+        padding: 0;
+        margin: 0;
+        align-self: center;
+        text-align: center;
+        text-align: center;
+        letter-spacing: 0.4px;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+      }
+      .card-heading {
+        font-size: 2.8rem;
+        font-weight: 400;
+        color: #0c4170;
+        text-align: center;
+      }
+      .card-description {
+        padding: 0;
+        margin: 0;
+        max-width: 25rem;
+        align-self: center;
+        line-height: 1.2;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 300;
+      }
+
+      .learn-btn {
+        align-self: center;
+        color: #0c4170;
+        text-transform: uppercase;
+        padding: 0.5rem 1.2rem;
+        background-color: #fff;
+        border-radius: 11px;
+        border: 1px solid #0c4170;
+      }
+    </style>
+    <title>Medicine</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="empty"></div>
+        <div class="header-container-inner">
+          <nav>
+            <a href="#" class="nav-links">Services</a>
+            <a href="#" class="nav-links">Membership</a>
+            <a href="#" class="nav-links">Locations</a>
+            <a href="#" class="nav-links item-4">Medical Team</a>
+            <a href="#" class="nav-links item-5">Book Now</a>
+            <a href="#" class="nav-links">Login</a>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </nav>
+          <div class="header-box">
+            <h1><span>Your</span> wellness evolution starts at home.</h1>
+            <p>
+              AT-HOME IV THERAPY & INTEGRATIVE MEDICINE, DESIGNED JUST FOR YOU
+            </p>
+            <a href="#" class="btn item-5" style="width: 514px">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="section-module">
+      <div class="module-box">
+        <div class="module-content">
+          <p class="module-sub-heading">When wellness meets tech</p>
+          <h2 class="secondary-heading">
+            We meet you where you're at, literally and figuratively.
+          </h2>
+          <p class="module-desciption">
+            Goals change. We're here to support you through the decisions that
+            help you achieve your wellness goals — in the place where you feel
+            most comfortable
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-how">
+      <div class="how-container">
+        <div class="how-text-box">
+          <p class="how-subheading">It's all here</p>
+          <h2 class="secondary-heading margin">
+            Integrative health services, right from your phone.
+          </h2>
+          <div class="all-step-btn">
+            <button class="step-btn">
+              <svg
+                class="step-icon"
+                width="8"
+                height="8"
+                viewBox="0 0 8 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="4"
+                  cy="4"
+                  r="3.5"
+                  stroke="currentColor"
+                  fill="rgba(0,0,0,0)"
+                ></circle>
+              </svg>
+              <span class="step-btn-text">Step 1</span>
+            </button>
+            <div class="step-box .open">
+              <p class="step-box-heading">Select your service.</p>
+              <ul class="step-box-list">
+                <li class="step-box-list-item">ivee therapy</li>
+                <li class="step-box-list-item">
+                  complimentary iv therapy consultation
+                </li>
+                <li class="step-box-list-item border-bottom">
+                  ivee membership
+                </li>
+              </ul>
+            </div>
+            <button class="step-btn">
+              <svg
+                class="step-icon"
+                width="8"
+                height="8"
+                viewBox="0 0 8 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="4"
+                  cy="4"
+                  r="3.5"
+                  stroke="currentColor"
+                  fill="rgba(0,0,0,0)"
+                ></circle>
+              </svg>
+              <span class="step-btn-text">Step 2</span>
+            </button>
+            <button class="step-btn">
+              <svg
+                class="step-icon"
+                width="8"
+                height="8"
+                viewBox="0 0 8 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="4"
+                  cy="4"
+                  r="3.5"
+                  stroke="currentColor"
+                  fill="rgba(0,0,0,0)"
+                ></circle>
+              </svg>
+              <span class="step-btn-text">Step 3</span>
+            </button>
+          </div>
+
+          <button class="how-btn">
+            <a href="#" class="how-btn-link">Book Now</a>
+          </button>
+        </div>
+        <div class="how-video-box">
+          <!-- <div class="video-box"> -->
+
+          <video controls="controls">
+            <!-- </div> -->
+            <source
+              src="https://cdn.sanity.io/files/41s4enrr/production/da2cf92b1448dcb20384c7c79f716c4eefebe931.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+      </div>
+    </section>
+    <section class="section-pricing">
+      <div class="pricing-textbox-outer">
+        <div class="pricing-text-box">
+          <p class="pricing-subheading">The right care for you</p>
+          <h2 class="secondary-heading margin-bottom">
+            Two options, one guarantee of complete health.
+          </h2>
+        </div>
+      </div>
+
+      <div class="pricing-cards-box">
+        <div class="pricing-cards">
+          <div class="pricing-card1">
+            <img src="ivee_card1.png" class="img-card1" />
+            <p class="card-subheading">Starting at $199</p>
+            <h3 class="card-heading">On-Demand Services</h3>
+            <p class="card-description">
+              Vital nutrients, delivered directly to your bloodstream. From
+              aging to immunity support, our medical team has formulated
+              treatments and evaluations to help you rapidly address your needs.
+            </p>
+            <a class="learn-btn">Learn more</a>
+          </div>
+          <div class="pricing-card1">
+            <img src="ivee_card2.png" class="img-card2" />
+            <p class="card-subheading">$199 / mo.</p>
+            <h3 class="card-heading">Membership</h3>
+            <p class="card-description">
+              Individualized support for your health goals and chronic condition
+              needs. Your ivee Provider will curate our on-demand services into
+              a personalized wellness plan that evolves with your life.
+            </p>
+            <a class="learn-btn">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
