@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      *,
+      *::after,
+      *::before {
+        box-sizing: inherit;
+      }
+
+      html {
+        font-size: 62.5%;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 400;
+      }
+
+      .container {
+        max-width: 80rem;
+        margin: 7.6rem auto;
+        /* background-color: rgb(64, 224, 224); */
+        /* text-align: center; No need to use when using FlexBox*/
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .btn {
+        font-size: 2.4rem;
+        display: inline-block;
+        text-align: center;
+        color: #fff;
+        letter-spacing: 5px;
+        text-decoration: none;
+        text-transform: uppercase;
+        line-height: 4rem;
+        opacity: 1;
+        position: relative;
+        /* background-color: khaki; */
+      }
+
+      .btn::before {
+        /* line-height: inherit; */
+        top: 0;
+        left: 0;
+        width: 100%;
+        transition: 2.5s;
+
+        position: relative;
+        display: block;
+        content: attr(data-front);
+        color: rgb(58, 58, 58);
+        background-color: lightgreen;
+        padding: 0 3rem;
+        opacity: 1;
+        transform: translateX(0) rotateY(0);
+      }
+
+      .btn::after {
+        top: 0;
+        left: 0;
+        width: 100%;
+        transition: 2.5s;
+
+        position: absolute;
+        display: inline-block;
+        content: attr(data-back);
+        color: rgb(58, 58, 58);
+        background-color: rgb(212, 105, 105);
+        opacity: 0;
+        transform: translateX(0) rotateY(-180deg);
+      }
+
+      .btn:hover::after {
+        opacity: 1;
+        transform: translateX(0) rotateY(0);
+      }
+
+      .btn:hover::before {
+        opacity: 0;
+        transform: translateX(0) rotateY(-180deg);
+      }
+
+      /* --------------------------- BOTTLE ---------------------------- */
+
+      .bottle {
+        line-height: 4rem;
+        display: inline-block;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <a href="#" class="btn" data-back="Yaay!" data-front="Hover"></a>
+      <a href="#" class="bottle">Hey</a>
+    </div>
+  </body>
+</html>
